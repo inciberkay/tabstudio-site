@@ -52,7 +52,19 @@ h1 { margin: 0 auto; max-width: 15em; text-wrap: balance; font-size: clamp(2.1re
 .button:hover { text-decoration: none; filter: brightness(1.05); }
 .button.disabled { background: rgba(236, 184, 117, 0.08); color: var(--accent); border: 1px solid rgba(236, 184, 117, 0.35); cursor: default; }
 
-.shot { width: 100%; border-radius: 12px; border: 1px solid var(--line); }
+/* App panels floating over one canvas */
+.float { position: relative; aspect-ratio: 16 / 10; max-width: 1136px; margin: 0 auto; }
+.float > * { position: absolute; }
+.card { border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.75), 0 6px 18px rgba(0, 0, 0, 0.4); }
+.f-canvas { top: 10%; height: 82%; width: auto; left: 50%; transform: translateX(-50%);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.8); }
+.f-toolbar { top: 2.5%; left: 50%; transform: translateX(-50%); width: 27%; border-radius: 10px; background: #151515; }
+.f-actions { top: 2.5%; right: 2%; width: 22%; border-radius: 12px; background: #1a1a1a; padding: 7px 9px; }
+.panel { background: #1f1f1f; padding: 6px 16px 10px; }
+.f-appearance { top: 14%; right: 2%; width: 22%; }
+.f-layout { top: 14%; left: 2%; width: 22%; }
+.f-time { bottom: 3%; left: 50%; transform: translateX(-50%); width: 52%; background: #151515; padding: 4px 18px 10px; }
 
 /* Specs */
 section.wrap { padding-top: 112px; padding-bottom: 112px; }
@@ -79,6 +91,16 @@ h2 { margin: 0 0 32px; font-size: 1rem; font-weight: 600; color: var(--muted); }
   .hero { padding-top: 64px; padding-bottom: 64px; }
   section.wrap { padding-top: 88px; padding-bottom: 72px; }
   .specs div { grid-template-columns: 1fr; gap: 4px; }
+  .float { aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 20px; }
+  .float > * { position: relative; transform: none; top: auto; right: auto; bottom: auto; left: auto; z-index: 1; }
+  .float > .f-canvas { z-index: 0; }
+  .f-time { margin-top: -56px; }
+  .f-toolbar { order: 1; width: min(380px, 100%); }
+  .f-canvas { order: 2; height: auto; width: min(300px, 70%); }
+  .f-time { order: 3; width: 100%; }
+  .f-actions { order: 4; width: min(320px, 100%); }
+  .f-appearance { order: 5; width: min(360px, 100%); }
+  .f-layout { order: 6; width: min(360px, 100%); }
 }
 
 @media (max-width: 480px) {
@@ -88,6 +110,8 @@ h2 { margin: 0 0 32px; font-size: 1rem; font-weight: 600; color: var(--muted); }
   .stage video { height: 220px; object-fit: cover;
     -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
     mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); }
-  .shot-wrap { display: none; }
+  .float { margin: 0 -16px; border-radius: 0; border-left: 0; border-right: 0; padding: 20px 16px; }
+  .f-time, .f-layout { display: none; }
+  .f-actions { margin-top: -56px; }
   .site-header nav { gap: 16px; }
 }
