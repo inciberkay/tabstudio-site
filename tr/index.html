@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TabMotion</title>
+  <meta name="description" content="Guitar Pro'da yazdığın tab'ı Mac'te kayan tab videosuna çevir. Şeffaf ProRes 4444, şeffaf PNG dizisi ya da MP4.">
+  <link rel="alternate" hreflang="en" href="../">
+  <link rel="icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Tab<b>Motion</b></span></a>
+      <nav><a href="support.html">Destek</a><a href="privacy.html">Gizlilik</a><a href="../" lang="en" hreflang="en">EN</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero wrap">
+      <img class="icon" src="../images/app-icon.png" alt="TabMotion uygulama simgesi">
+      <h1>Guitar Pro dosyalarını kayan tab videolarına dönüştür.</h1>
+      <p class="lede">.gp dosyanı içe aktar, görünümünü özelleştir ve notalarla senkronize ilerleyen bir tab videosu oluştur.</p>
+      <div class="cta">
+        <a class="store-badge" href="https://apps.apple.com/tr/app/id6830223342"><img src="../images/mac-app-store-badge-tr.svg" width="188" height="40" alt="Mac App Store'dan indirin"></a>
+        <small>Apple Silicon işlemcili Mac'ler için</small>
+      </div>
+      <figure class="stage">
+        <video src="../media/export-demo.mp4" poster="../media/export-demo.jpg" width="2560" height="720" autoplay muted loop playsinline aria-label="TabMotion ile alınmış bir video: tab, altın renkli çizginin altından sağdan sola akıyor."></video>
+      </figure>
+    </div>
+
+    <div class="wrap">
+      <div class="float" role="img" aria-label="Tuvalin üzerinde yüzen TabMotion panelleri: şeffaf arka planlı dikey 1080 × 1920 bir video, arka plan seçimi, zaman çizelgesi, Appearance ve Layout ayarları.">
+        <img class="f-canvas" src="../images/ui-canvas-only.png" width="592" height="1052" alt="">
+        <img class="f-toolbar card" src="../images/ui-toolbar.png" width="628" height="62" alt="">
+        <img class="f-actions card" src="../images/ui-actions.png" width="540" height="82" alt="">
+        <div class="f-appearance card panel"><img src="../images/ui-appearance.png" width="506" height="664" alt=""></div>
+        <div class="f-layout card panel"><img src="../images/ui-motion.png" width="506" height="440" alt=""></div>
+        <div class="f-time card">
+          <img src="../images/ui-transport.png" width="1492" height="122" alt="">
+          <img src="../images/ui-timeline.png" width="1492" height="188" alt="">
+        </div>
+      </div>
+    </div>
+
+    <section class="wrap">
+      <h2>Özellikler</h2>
+      <dl class="specs">
+        <div><dt>Dosya</dt><dd>Guitar Pro (.gp)</dd></div>
+        <div><dt>Çıktı</dt><dd>Şeffaf arka planlı ProRes 4444<br>Şeffaf arka planlı PNG dizisi<br>Renkli arka planlı MP4</dd></div>
+        <div><dt>Çözünürlük</dt><dd>4K'ya kadar, yatay ya da dikey</dd></div>
+        <div><dt>Kare hızı</dt><dd>24, 25, 30, 50, 60 fps</dd></div>
+        <div><dt>Zamanlama</dt><dd>Doğrudan dosyadan gelir. Ses, kayıt ya da senkron gerekmez.</dd></div>
+        <div><dt>Görünüm</dt><dd>Rakam fontu, tab rengi, tab boyutu, nota boyutu, oynatma çizgisi, hareket yumuşatma, arka plan, hazır ayarlar</dd></div>
+        <div><dt>Önizleme</dt><dd>Ekranda ne görüyorsan video da öyle çıkar.</dd></div>
+        <div><dt>Fiyat</dt><dd>İlk 3 video ücretsiz, tam kalitede ve tüm özellikler açık. Sonrası tek seferlik ödeme, abonelik yok.</dd></div>
+        <div><dt>Gereksinim</dt><dd>Apple Silicon işlemcili bir Mac</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Guitar Pro, Arobas Music'in ticari markasıdır. TabMotion'ın Arobas Music ile bir bağlantısı yoktur ve Arobas Music tarafından onaylanmamıştır.</p>
+      <p>© 2026 Alkamanas Bilişim</p>
+    </div>
+  </footer>
+  <script>
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var v = document.querySelector('.stage video'); v.removeAttribute('autoplay'); v.pause();
+    }
+  </script>
+</body>
+</html>
